@@ -28,11 +28,11 @@ I wait while the driver is being installed:
 
 ![wait...](img3.png "wait...")
 
-I click *Restart*:
+I click *Restart* and wait for the computer to restart:
 
 ![restart...](img4.png "click 'Restart...'")
 
-To verify that the NVIDIA driver 396 is active I call:
+To verify that the NVIDIA driver 440 is active I call from a console:
 ```
 nvidia-smi
 ```
@@ -72,13 +72,13 @@ I accept the license terms and confirm the location.
 
 ## Installing TensorFlow 2 and PyTorch
 
-Currently TensorFlow 2 works only with Python 3.7 and CUDA 10.1 while PyTorch can work with Python 3.7 and 3.8 and CUDA 10.1 and 10.2. So I see three possibible solutions:
+Currently TensorFlow 2 works only with Python 3.7 and CUDA 10.1 while PyTorch can work with Python 3.7 and 3.8 and CUDA 10.1 and 10.2. So I see three possible solutions:
 
 1. Install each with the latest supported versions in a separate environment.
 2. Install both in a single environment. Install TensorFlow first and then PyTorch, so conda will use the versions already installed for TensorFlow.
 3. Install both in a single environment. Install PyTorch first while explicitly stating that it has to be installed with CUDA 10.1 and Python 3.7 and then install TensorFlow. 
 
-I choose 2. because I want TensorFlow and PyTorch in a single environment and I don't want to mess around with version numbers.
+I choose 2. because I want TensorFlow and PyTorch in a single environment and I don't like to mess around with version numbers.
 
 ### Create an environment
 
